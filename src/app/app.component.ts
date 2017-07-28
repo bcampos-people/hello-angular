@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Tarefas';
+  tasks = [];
+  task  = '';
+
+  add() {
+    this.tasks.push(this.task);
+    console.log(this.tasks);
+  }
 }
