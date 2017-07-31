@@ -6,11 +6,19 @@
   <label>Value:</label>
   <input type="text" [(ngModel)]="task.value">
 </p>
+<p>
+  <label>Date:</label>
+  <input type="text" [(ngModel)]="task.date_launch">
+</p>
 <button type="button" (click)="add()">Adicionar na Lista</button>
 
 <ul>
   <li *ngFor="let item of tasks">
-    {{ item.name }} - {{ item.value }}
+    {{
+      (item.name | lowercase) + ' - ' +
+      (item.value | formatCurrency) + ' - ' +
+      (item.date_launch | formatDate)
+    }}
   </li>
 </ul>
 
