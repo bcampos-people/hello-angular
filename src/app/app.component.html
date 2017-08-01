@@ -1,3 +1,7 @@
 <h3>{{ title }}</h3>
-<app-task-new [tasks]="tasks"></app-task-new>
-<app-task-list [tasks]="tasks"></app-task-list>
+<table>
+    <tr *ngFor="let person of secretaryGenerals">
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+    </tr>
+</table>
